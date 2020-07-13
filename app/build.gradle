@@ -19,8 +19,8 @@ android {
             dimension = "mode"
             applicationId "com.iervan.belajarmidtrans.sandbox"
             resValue "string", "app_name", "Kiostr SandBox"
-            buildConfigField "String", "MERCHANT_BASE_URL", "\"https://app-midtrans.herokuapp.com/index.php/\""
-            buildConfigField "String", "MERCHANT_CLIENT_KEY", "\"SB-Mid-client-yD-82HwJSiiNMV4p\""
+            buildConfigField "String", "MERCHANT_BASE_URL", "\"url php/\""
+            buildConfigField "String", "MERCHANT_CLIENT_KEY", "\"client key\""
         }
 
 //      mode produksi
@@ -29,7 +29,7 @@ android {
 //            applicationId "com.iervan.belajarmidtrans"
 //            resValue "string", "app_name", "Kiostr Production"
 //            buildConfigField "string", "MERCHANT_BASE_URL", "\"http://kiostr.herokuapp.com/index.php/\""
-//            buildConfigField "string", "MERCHANT_CLIENT_KEY", "\"SB-Mid-client-yD-82HwJSiiNMV4p\""
+//            buildConfigField "string", "MERCHANT_CLIENT_KEY", "\"client key\""
 //        }
     }
 

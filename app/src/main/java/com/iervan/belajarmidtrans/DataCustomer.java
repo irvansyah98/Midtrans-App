@@ -1,5 +1,7 @@
 package com.iervan.belajarmidtrans;
 
+import android.util.Log;
+
 import com.midtrans.sdk.corekit.core.TransactionRequest;
 import com.midtrans.sdk.corekit.models.BankType;
 import com.midtrans.sdk.corekit.models.CustomerDetails;
@@ -47,6 +49,8 @@ public class DataCustomer {
         creditCard.setAuthentication(CreditCard.AUTHENTICATION_TYPE_RBA);
         creditCard.setBank(BankType.MANDIRI);
         request.setCreditCard(creditCard);
+        Log.e("coba",itemDetails.toString());
+        Log.e("coba",details.toString());
 
         return request;
     }

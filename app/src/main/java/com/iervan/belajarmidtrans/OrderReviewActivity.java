@@ -36,8 +36,8 @@ public class OrderReviewActivity extends AppCompatActivity implements Transactio
     private void initMidtransSdk() {
         SdkUIFlowBuilder.init()
                 .setContext(this)
-                .setMerchantBaseUrl(BuildConfig.MERCHANT_BASE_URL)
-                .setClientKey(BuildConfig.MERCHANT_CLIENT_KEY)
+                .setMerchantBaseUrl("url php")
+                .setClientKey("Client Key Midtrans")
                 .setTransactionFinishedCallback(this)
                 .enableLog(true)
                 .setColorTheme(new CustomColorTheme("#FFE51255","#B61548","FFE51255"))
@@ -74,10 +74,15 @@ public class OrderReviewActivity extends AppCompatActivity implements Transactio
     private void actionButton() {
 
             MidtransSDK.getInstance().setTransactionRequest(DataCustomer.transactionRequest(
-                    "1",20000,
+                    "1",10000,
                     getIntent().getIntExtra("qty",0),
                     getIntent().getStringExtra("name")
             ));
+        MidtransSDK.getInstance().setTransactionRequest(DataCustomer.transactionRequest(
+                "2",20000,
+                getIntent().getIntExtra("qty",0),
+                getIntent().getStringExtra("name")
+        ));
             MidtransSDK.getInstance().startPaymentUiFlow(this);
 
     }
